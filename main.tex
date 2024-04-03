@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{changepage}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage[
+backend=biber
+]{biblatex}
+\usepackage{float}
+% Use bib.bib file for bibliography
+\addbibresource{bib.bib}
+
+% Use IEEE citations
+
+\useunder{\uline}{\ul}{}
+
+\title{Observing the Quantum States and Spectra of Gases}
+\date{\today}
+\author{Mateusz Kazimierczak and Gustavo Nakashita}
+
+\begin{document}
+
+\maketitle
+
+\input{intro/intro.tex}
+\input{method/method.tex}
+\input{Results/Results.tex}
+\input{Conclusion/Conclusion.tex}
+\input{Appendix/Appendix.tex}
+
+\printbibliography
+
+\end{document}

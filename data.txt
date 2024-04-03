@@ -1,0 +1,32 @@
+1 : 
+
+Green - 535 nm - 0.870907
+Blue - 455 nm - 1.24025
+Cyan - 505 nm - 0.965380
+Amber - 590 nm - 0.614265
+Red - 640 nm - 0.508180
+Orange Red - 615 nm - 0.534304
+UV - 390 nm - 1.63651
+Infrared - 935 nm - ??
+
+
+2 : 
+
+Max intensity
+|
+Lowest
+
+Stopping voltage -- Current (votage across 100 kO resisotr)
+0.947739 -- 0.218967
+0.948277 -- 0.188794
+0.943390  -- 0.173533
+0.943300  -- 0.160800
+
+3:
+min 421.250mV
+max: 578.750
+95%: 
+771.250
+
+time: 
+-4 -> 78 microseconds.
