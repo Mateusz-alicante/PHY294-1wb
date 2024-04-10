@@ -62,6 +62,5 @@ ax1.set_ylim(0.15, 0.250)
 ax2.set_ylim(0.93, 1.03)
 
 
-ax1.legend()
 fig.tight_layout()
 plt.savefig('Results/Part2/Part2.png')
