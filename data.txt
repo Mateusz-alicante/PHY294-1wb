@@ -7,7 +7,7 @@ Amber - 590 nm - 0.614265
 Red - 640 nm - 0.508180
 Orange Red - 615 nm - 0.534304
 UV - 390 nm - 1.63651
-Infrared - 935 nm - ??
+Infrared - 935 nm - 0
 
 
 2 : 
