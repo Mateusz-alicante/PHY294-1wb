@@ -12,9 +12,10 @@ The transient response of the phototube is shown in Figure \ref{fig:V_Func}. The
     \tau = \frac{(82 \pm 1.4)~[\mu s]}{-ln(0.05)} = (27.4 \pm 0.5)~[\mu s]
 \end{gather*}
 
-Then, we can find the average power of each electron using Equation \textbf{EDIT}:
+Then, we can find the average power of each electron by dividing the power of the lamp by the area of the individual electrons in the phototube, assuming all the power is emitted as light and absorbed by electrons:
 \begin{gather*}
-    P_e = 60\pm1~[mW] \frac{(0.3 \pm 0.1~[nm])^2}{3.23\pm 0.01~[cm^2]} = (1.7 \pm 1.1) \times 10^{-17}~[W] = 104 \pm 70~[eV/s]
+    P_e = P_{LED} \frac {A_e}{A_{PC}} = 60\pm1~[mW] \frac{(0.3 \pm 0.1~[nm])^2}{3.23\pm 0.01~[cm^2]} \\
+    P_e = (1.7 \pm 1.1) \times 10^{-17}~[W] = 104 \pm 70~[eV/s]
 \end{gather*}
 
 Thus, using the Work Function from Equation \ref{eq:work_function}, we can calculate the time for the electron to absorb the required energy to release:
@@ -22,4 +23,4 @@ Thus, using the Work Function from Equation \ref{eq:work_function}, we can calcu
     t = \frac{1.33 \pm 0.07~[eV]}{104 \pm 70~[eV/s]} = (0.013 \pm 0.009)~[s] = (13 \pm 9)~[ms]
 \end{gather*}
 
-This is significantly longer than the experimentally-derived time constant, which suggests that the electrons do not absorb energy in a continuous process, instead getting energy in packets, or quanta, as hypothesized by Einstein.
+This is significantly longer than the experimentally-derived time constant, which suggests that the electrons do not absorb energy in a continuous process, instead getting energy in packets, or quanta, as hypothesized by Einstein. This is because if energy is absorbed in quanta, electrons can immediately receive the energy required to be released rather than waiting for the energy to slowly ramp up. Thus, the resulting current will be less, but the time constant is significantly smaller for the quantized explanation than the classical explanation.

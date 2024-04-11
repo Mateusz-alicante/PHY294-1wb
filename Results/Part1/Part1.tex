@@ -1,6 +1,6 @@
 \subsection{Part 1: Planck's Constant and Work Function}
 \label{sec:results1}
-Table \ref{tab:results1} lists all the measured stopping voltages for the light produced at each wavelength (uncertainty in wavelength was given as the bandwidth from the handout, and uncertainty in the stopping voltage is taken as the shown precision on the voltmeter) and the corresponding frequency using $f = \frac{c}{\lambda}$. The stopping voltage was plotted against the frequency in Figure \ref{fig:frequency_vs_voltage}. The data was fitted to a linear regression model, yielding the following relationship, where $V$ is the stopping voltage in $[V]$ and $f$ is the frequency in $[THz]$:
+Table \ref{tab:results1} lists all the measured stopping voltages for the light produced at each wavelength (uncertainty in wavelength was given as the bandwidth from the handout, and uncertainty in the stopping voltage is taken as the shown precision on the voltmeter) and the corresponding frequency using $f = \frac{c}{\lambda}$. The stopping voltage was plotted against the frequency in Figure \ref{fig:frequency_vs_voltage}. The data was fitted to a linear regression model $V = b_0 + b_1f$, yielding the following relationship, where $V$ is the stopping voltage in $[V]$ and $f$ is the frequency in $[THz]$:
 \begin{gather}
     V = (-1.329 \pm 0.056) + (0.00387 \pm 0.00009)f \\
     \chi^2 / \nu = 3.1 \times 10^{11} / 6 = 5.1 \times 10^{10}
@@ -38,27 +38,28 @@ The residuals are small and random (Besides the IR light, which was not used in 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{Results/Part1/Frequency_vs_Stopping_Voltage.png}
-    \caption{Stopping Voltage vs. Frequency. The IR light with 0V stopping voltage was not used in the fit, though it is still plotted with its residual}
+    \caption{Stopping Voltage vs. Frequency. The IR light with 0V stopping voltage was not used in the fit, though it is still plotted with its residual. Note that the voltage uncertainties here are from the regression and not the voltmeter, since the regression yielded a larger uncertainty.}
     \label{fig:frequency_vs_voltage}
 \end{figure}
 
-Applying this fit to Equation \textbf{EDIT}, we can calculate planck's constant as:
-\begin{gather*}
-    h = (1.60217662 \times 10^{-19}~[C]) \cdot (0.00387 \pm 0.00009)~[V\cdot ps] \\
+Applying this fit to Equation \ref{eq:energy}, we can calculate planck's constant as:
+\begin{gather}
+    \label{eq:planck}
+    h = e \cdot b_1 = (1.60217662 \times 10^{-19}~[C]) \cdot (0.00387 \pm 0.00009)~[V\cdot ps] \\
     = 6.21 \times 10^{-34} \pm 0.15^{-34} ~ [J\cdot s]
-\end{gather*}
+\end{gather}
 
 Comparing this to the true value of h at $6.62607015 \times 10^{-34}~[J\cdot s]$, we see that our value is more than 2 standard deviations away from the true value. This is not ideal, but we do have the number at the correct order of magnitude. The discrepancy is likely due to the uncertainty in wavelength, as the graph shows that at high frequencies, the uncertainty was quite significant relative to the data.
 
-Similarly, the stopping frequency is given by Equation \textbf{EDIT}:
+Similarly, the stopping frequency is given by the same equation \ref{eq:energy} (using the experimental value of h in Equation \ref{eq:planck}):
 \begin{gather*}
-    f_0 = \frac{1.60217662 \times 10^{-19}~[C]}{6.21 \times 10^{-34} \pm 0.15^{-34} ~ [J\cdot s]}(1.329 \pm 0.056)~[V] = 343 \pm 16~[THz]
+    f_0 = \frac{e}{h} \cdot b_0 = \frac{1.60217662 \times 10^{-19}~[C]}{6.21 \times 10^{-34} \pm 0.15^{-34} ~ [J\cdot s]}(1.329 \pm 0.056)~[V] = 343 \pm 16~[THz]
 \end{gather*}
 This represents the frequency below which the stopping voltage is 0, and the infrared light does indeed fall below this range and h as 0 stopping voltage, supporting this point.
 
-Finally, we can thus calculate the work function for this phototube using Equation \textbf{EDIT}:
+Finally, we can thus calculate the work function for this phototube using Equation \ref{eq:stopping_energy}:
 \begin{gather}
-    E_0 = (6.21 \times 10^{-34} \pm 0.15^{-34} ~ [J\cdot s]) \cdot (343 \pm 16~[THz]) = 2.1 \times 10^{-19} \pm 0.1^{-19} ~ [J] = 1.33 \pm 0.07 ~ [eV]
+    E_0 = hf_0 = (6.21 \times 10^{-34} \pm 0.15^{-34} ~ [J\cdot s]) \cdot (343 \pm 16~[THz]) \\ 
+    E_0= 2.1 \times 10^{-19} \pm 0.1^{-19} ~ [J] = 1.33 \pm 0.07 ~ [eV]
     \label{eq:work_function}
 \end{gather}
-
