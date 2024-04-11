@@ -2,6 +2,12 @@
 
 The experimental setup is shown in figure \ref{fig:setup}.
 
+Uncertainties are carried through calculations via uncertainty propogation, following:
+\begin{equation}
+    \label{eq:uncertainty}
+    \delta f = \sqrt{\left(\frac{\partial f}{\partial x}\delta x\right)^2 + \left(\frac{\partial f}{\partial y}\delta y\right)^2 + \ldots}
+\end{equation}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{method/setup.png}
